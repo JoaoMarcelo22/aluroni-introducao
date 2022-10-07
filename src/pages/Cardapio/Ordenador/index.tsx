@@ -21,9 +21,10 @@ export default function Ordenador({
         [styles.ordenador]: true,
         [styles["ordenador--ativo"]]: ordenador !== ""
       })}
-      onClick={() => setAberto(!aberto)}  {/* Mudando o estado de aberto para fechado */}
-      onBlur={() => setAberto(false)}  {/* Clicando fora fecha o icone */}
-    >
+      onClick={() => setAberto(!aberto)}  
+      onBlur={() => setAberto(false)} 
+    >{/* Mudando o estado de aberto para fechado */}
+     {/* Clicando fora fecha o icone */}
       <span>{nomeOrdenador || "Ordenar Por"}</span>
       {aberto ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} /> } {/*Icone aberto ou fechado */}
       <div className={classNames({
